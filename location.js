@@ -1,6 +1,8 @@
 var x = document.querySelector(".city-name");
 
-document.getElementById("btn-location").addEventListener("click", getLocation);
+document.getElementById("btn-location").addEventListener("click", function () {
+    getLocation();
+});
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -51,8 +53,9 @@ function displayLocation(latitude, longitude) {
                     country = value[count - 1];
                     city = value[count - 2];
                     adress = value[count - 3];
+                    correct = true;
                     x.innerHTML = city;
-                    console.log(city);
+                    getWheater(city);
                 } else {
                     x.innerHTML = "address not found";
                 }
@@ -61,4 +64,12 @@ function displayLocation(latitude, longitude) {
             }
         }
     );
+}
+
+function getWheater(city) {
+    $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + "&appid=3a04b53f7b6d2edbaad0c1e9b9d783f1",
+        function (response) {
+            console.log(response)
+
+        });
 }
