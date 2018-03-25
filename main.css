@@ -187,9 +187,9 @@ h1 {
 #wheater-info {
     position: absolute;
     bottom: 0;
-    left: 15%;
-    right: 15%;
-    width: 70%;
+    left: 25%;
+    right: 25%;
+    width: 50%;
     font-weight: 600;
     display: none;
 }
