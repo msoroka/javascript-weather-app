@@ -113,8 +113,8 @@ function wheaterSet(city, country, wheater, temp, pressure, windSpeed) {
     //    $(".container-fluid").css("background", "rgba(0, 0, 0, 0.4)");    
     $("#city-info").html(city + " " + country);
     $("#wheat-info").html(wheater);
-    $("#temp-info").html(temp);
-    $("#pressure-info").html(pressure);
-    $("#windSpeed-info").html(windSpeed);
+    $("#temp-info").html(temp + " &deg;C");
+    $("#pressure-info").html(pressure + " hPa");
+    $("#windSpeed-info").html(windSpeed + " m/s");
     $("#wheater-info").show();
 }
