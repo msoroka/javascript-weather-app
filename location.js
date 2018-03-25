@@ -6,6 +6,10 @@ document.getElementById("btn-location").addEventListener("click", function () {
     getLocation();
 });
 
+document.getElementById("btn-choice").addEventListener("click", function () {
+    getWheater($("#city-input").val());
+});
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -75,6 +79,7 @@ function getWheater(city) {
             var temp = response.main.temp;
             var wheater = response.weather[0].main;
             var windSpeed = response.wind.speed;
+            console.log(city);
             wheaterSet(temp, wheater, windSpeed);
         });
 }
