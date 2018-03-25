@@ -69,7 +69,10 @@ function displayLocation(latitude, longitude) {
 function getWheater(city) {
     $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + "&appid=3a04b53f7b6d2edbaad0c1e9b9d783f1",
         function (response) {
-            console.log(response)
-
+            console.log(response);
+            var temp = response.main.temp;
+            var wheater = response.weather[0].main;
+            var windSpeed = response.wind.speed;
+            wheaterSet(temp, wheater, windSpeed);
         });
 }
