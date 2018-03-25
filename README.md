@@ -14,4 +14,4 @@
   <li>OpenWheaterMap</li>
 </ul>
 
-<p>Getting city name taken from <a href="https://stackoverflow.com/questions/6548504/how-can-i-get-city-name-from-a-latitude-and-longitude-point"Slackoverflow</a> using solution created by user <a href="https://stackoverflow.com/users/3894567/sanchit-gupta">Sanchit Gupta</a></p>
+<p>Getting city name taken from <a href="https://stackoverflow.com/questions/6548504/how-can-i-get-city-name-from-a-latitude-and-longitude-point">Slackoverflow</a> using solution created by user <a href="https://stackoverflow.com/users/3894567/sanchit-gupta">Sanchit Gupta</a></p>
