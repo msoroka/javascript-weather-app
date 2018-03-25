@@ -1,9 +1,12 @@
 <h2>WheaterApp</h2>
 
+<p>Simple wheater app with animated background. You can check wheater using your's current localization or by typing city name.</p>
+
 <h4>Used technologies</h4>
 <ul>
   <li>HTML5</li>
   <li>CSS3</li>
+  <li>Bootstrap 4.0</li>
   <li>Vanilla JS</li>
   <li>jQuery</li>
 </ul>
