@@ -1,5 +1,5 @@
-<h2>WheateApp</h2>
-<br>
+<h2>WheaterApp</h2>
+
 <h4>Used technologies</h4>
 <ul>
   <li>HTML5</li>
@@ -7,7 +7,7 @@
   <li>Vanilla JS</li>
   <li>jQuery</li>
 </ul>
-<br>
+
 <h4>Used APIs</h4>
 <ul>
   <li>GoogleMap</li>
