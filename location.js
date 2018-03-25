@@ -90,8 +90,11 @@ function wheaterSet(temp, wheater, windSpeed) {
     if (wheater == "Rain") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/rain.mp4" type="video/mp4"></video>');
     }
-    if (wheater == "Clouds") {
+    if (wheater == "Clouds" && (hour <= 20 && hour >= 6)) {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clouds.mp4" type="video/mp4"></video>');
+    }
+    if (wheater == "Clouds") {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/cloudsNight.mp4" type="video/mp4"></video>');
     }
     if (wheater == "Snow") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/snow.mp4" type="video/mp4"></video>');
