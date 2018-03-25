@@ -5,7 +5,6 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #D8EDF2;
 }
 
 .container-fluid.section-one {
@@ -20,6 +19,7 @@ body {
 h1 {
     text-align: center;
     font-weight: 700;
+    font-size: 4rem;
 }
 
 .row {
@@ -49,12 +49,12 @@ h1 {
 }
 
 .choice-text {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .city-name {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -63,14 +63,24 @@ h1 {
     right: 0;
     bottom: 0;
     margin: 0;
-    max-height: 65vh;
+    min-height: 100vh;
     z-index: -1;
     min-width: 100%;
 }
 
 .container-fluid.section-two {
     z-index: 1;
+}
+
+.container-fluid {
     background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+#city {
+    margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -78,14 +88,40 @@ h1 {
         background: rgba(0, 0, 0, 0.4);
         z-index: 1;
         color: white;
+        width: 100%;
     }
     .col {
-        margin-top: 20px;
+        margin-top: 10px;
     }
+    #city {
+        margin-top: 5px;
+        margin-bottom: -10px;
+    }
+
+    #city-input {
+        margin-bottom: -10px;
+    }
+    .choice-text {
+        font-size: 0.9rem !important;
+        margin: -3px;
+    }
+    .city-name {
+        font-size: 0.9rem !important;
+    }
+
     #myVideo {
         position: absolute;
         min-height: 100vh;
         z-index: -1;
         min-width: 100%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .form-group {
+        margin-top: 10px;
+    }
+    #two {
+        margin-top: 20px;
     }
 }
