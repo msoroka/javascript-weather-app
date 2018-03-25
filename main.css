@@ -83,7 +83,56 @@ h1 {
     margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-width: 331px) {
+    @media only screen and (max-width: 650px) {
+        .container-fluid {
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            color: white;
+            width: 100%;
+        }
+        .col {
+            margin-top: 10px;
+        }
+        #city {
+            margin-top: 5px;
+            margin-bottom: -10px;
+        }
+
+        #city-input {
+            margin-bottom: -10px;
+        }
+        .choice-text {
+            font-size: 0.9rem !important;
+            margin: -3px;
+        }
+        .city-name {
+            font-size: 0.9rem !important;
+        }
+
+        #myVideo {
+            position: absolute;
+            min-height: 100vh;
+            z-index: -1;
+            min-width: 100%;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        .form-group {
+            margin-top: 10px;
+        }
+        #two {
+            margin-top: 20px;
+        }
+        #wheater-info {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 330px) {
     .container-fluid {
         background: rgba(0, 0, 0, 0.4);
         z-index: 1;
@@ -91,22 +140,22 @@ h1 {
         width: 100%;
     }
     .col {
-        margin-top: 10px;
+        margin-top: 2px;
     }
     #city {
         margin-top: 5px;
-        margin-bottom: -10px;
+        margin-bottom: -20px;
     }
 
     #city-input {
         margin-bottom: -10px;
     }
     .choice-text {
-        font-size: 0.9rem !important;
+        font-size: 0.7rem !important;
         margin: -3px;
     }
     .city-name {
-        font-size: 0.9rem !important;
+        font-size: 0.7rem !important;
     }
 
     #myVideo {
@@ -116,7 +165,8 @@ h1 {
         min-width: 100%;
     }
     h1 {
-        font-size: 1.5rem;
+        margin-top: -25px;
+        font-size: 1.2rem;
     }
     .form-group {
         margin-top: 10px;
@@ -124,4 +174,22 @@ h1 {
     #two {
         margin-top: 20px;
     }
+    #wheater-info {
+        font-size: 0.7rem;
+    }
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+#wheater-info {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    font-weight: 600;
+    display: none;
 }

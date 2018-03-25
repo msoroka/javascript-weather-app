@@ -76,15 +76,18 @@ function getWheater(city) {
     $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + "&appid=3a04b53f7b6d2edbaad0c1e9b9d783f1",
         function (response) {
             console.log(response);
-            var temp = response.main.temp;
+            var city2 = city;
+            var country = response.sys.country;
             var wheater = response.weather[0].main;
+            var temp = response.main.temp;
+            var pressure = response.main.pressure;
             var windSpeed = response.wind.speed;
-            console.log(city);
-            wheaterSet(temp, wheater, windSpeed);
+            console.log(city2 + " " + country + " " + wheater + " " + temp + " " + pressure + " " + windSpeed);
+            wheaterSet(city2, country, wheater, temp, pressure, windSpeed);
         });
 }
 
-function wheaterSet(temp, wheater, windSpeed) {
+function wheaterSet(city, country, wheater, temp, pressure, windSpeed) {
     console.log(wheater);
     if (wheater == "Clear" && (hour <= 20 && hour >= 6)) {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clearDay.mp4" type="video/mp4"></video>');
@@ -104,5 +107,14 @@ function wheaterSet(temp, wheater, windSpeed) {
     if (wheater == "Snow") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/snow.mp4" type="video/mp4"></video>');
     }
-    $(".container-fluid").css("background", "rgba(0, 0, 0, 0.4)");
+    if (wheater == "Mist") {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/mist.mp4" type="video/mp4"></video>');
+    }
+    //    $(".container-fluid").css("background", "rgba(0, 0, 0, 0.4)");    
+    $("#city-info").html(city + " " + country);
+    $("#wheat-info").html(wheater);
+    $("#temp-info").html(temp);
+    $("#pressure-info").html(pressure);
+    $("#windSpeed-info").html(windSpeed);
+    $("#wheater-info").show();
 }
