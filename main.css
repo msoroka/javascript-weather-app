@@ -4,13 +4,19 @@
 }
 
 body {
-    background: #D8EDF2;
     font-family: 'Montserrat', sans-serif;
 }
 
-.container-fluid {
+.container-fluid.section-one {
     margin-top: 20px;
-    width: 90%;
+    background: #D8EDF2;
+    margin-top: auto;
+    padding: 50px;
+    height: 35vh;
+}
+
+.container-fluid.section-two {
+    height: 65vh;
 }
 
 h1 {
