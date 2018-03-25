@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.col {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
