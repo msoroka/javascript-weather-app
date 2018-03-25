@@ -1,4 +1,6 @@
 var x = document.querySelector(".city-name");
+var date = new Date();
+var hour = date.getHours();
 
 document.getElementById("btn-location").addEventListener("click", function () {
     getLocation();
@@ -75,4 +77,23 @@ function getWheater(city) {
             var windSpeed = response.wind.speed;
             wheaterSet(temp, wheater, windSpeed);
         });
+}
+
+function wheaterSet(temp, wheater, windSpeed) {
+    console.log(wheater);
+    if (wheater == "Clear" && (hour <= 20 && hour >= 6)) {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/rain.mp4" type="video/mp4"></video>');
+    }
+    if (wheater == "Clear") {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/rain.mp4" type="video/mp4"></video>');
+    }
+    if (wheater == "Rain") {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/rain.mp4" type="video/mp4"></video>');
+    }
+    if (wheater == "Clouds") {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clouds.mp4" type="video/mp4"></video>');
+    }
+    if (wheater == "Snow") {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/snow.mp4" type="video/mp4"></video>');
+    }
 }
