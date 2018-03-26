@@ -17,6 +17,7 @@ document.getElementById("city-input").addEventListener("keypress", function (eve
     if (event.keyCode == 13) {
         getWheater($("#city-input").val());
         console.log("asd");
+        $("#city-input").val("");
     }
 }, false);
 
