@@ -122,6 +122,9 @@ function wheaterSet(city, country, wheater, temp, pressure, windSpeed) {
     if (wheater == "Mist") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/mist.mp4" type="video/mp4"></video>');
     }
+    if (wheater == "Thunderstorm") {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/thunderstorm.mp4" type="video/mp4"></video>');
+    }
     //    $(".container-fluid").css("background", "rgba(0, 0, 0, 0.4)");    
     $("#city-info").html(city + " " + country);
     $("#wheat-info").html(wheater);
@@ -129,4 +132,5 @@ function wheaterSet(city, country, wheater, temp, pressure, windSpeed) {
     $("#pressure-info").html(pressure + " hPa");
     $("#windSpeed-info").html(windSpeed + " m/s");
     $("#wheater-info").show();
+    thunderstorm
 }
