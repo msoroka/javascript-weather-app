@@ -2,6 +2,8 @@ var x = document.querySelector(".city-name");
 var date = new Date();
 var hour = date.getHours();
 
+
+// Event handling for buttons "Check" 
 document.getElementById("btn-location").addEventListener("click", function () {
     getLocation();
 });
@@ -9,6 +11,15 @@ document.getElementById("btn-location").addEventListener("click", function () {
 document.getElementById("btn-choice").addEventListener("click", function () {
     getWheater($("#city-input").val());
 });
+
+// Event handling for press Enter 
+document.getElementById("city-input").addEventListener("keypress", function (event) {
+    if (event.keyCode == 13) {
+        getWheater($("#city-input").val());
+        console.log("asd");
+    }
+}, false);
+
 
 function getLocation() {
     if (navigator.geolocation) {
