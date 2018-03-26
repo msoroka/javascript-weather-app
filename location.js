@@ -89,20 +89,20 @@ function getWheater(city) {
 
 function wheaterSet(city, country, wheater, temp, pressure, windSpeed) {
     console.log(wheater);
-    if (wheater == "Clear" && (hour <= 20 && hour >= 6)) {
-        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clearDay.mp4" type="video/mp4"></video>');
-    }
     if (wheater == "Clear") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clearNight.mp4" type="video/mp4"></video>');
+    }
+    if (wheater == "Clear" && (hour <= 20 && hour >= 6)) {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clearDay.mp4" type="video/mp4"></video>');
     }
     if (wheater == "Rain") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/rain.mp4" type="video/mp4"></video>');
     }
-    if (wheater == "Clouds" && (hour <= 20 && hour >= 6)) {
-        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clouds.mp4" type="video/mp4"></video>');
-    }
     if (wheater == "Clouds") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/cloudsNight.mp4" type="video/mp4"></video>');
+    }
+    if (wheater == "Clouds" && (hour <= 20 && hour >= 6)) {
+        $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/clouds.mp4" type="video/mp4"></video>');
     }
     if (wheater == "Snow") {
         $("#wheater-video").html("<video autoplay muted loop " + 'id="myVideo"><source  src="videos/snow.mp4" type="video/mp4"></video>');
